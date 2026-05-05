@@ -1,7 +1,18 @@
 {
   "permissions": {
     "allow": [
-      "Bash(pnpm add *)"
+      "Bash(pnpm add *)",
+      "Bash(Get-ChildItem -Path \"c:\\\\dev\\\\delivery-app\" -Force)",
+      "Bash(Select-Object Name, PSIsContainer)",
+      "Bash(Format-Table -AutoSize)",
+      "Bash(find /mnt/c/dev/delivery-app -maxdepth 2 -type f \\\\\\( -name \"package.json\" -o -name \"*.yaml\" -o -name \"tsconfig.json\" -o -name \"vite.config.*\" -o -name \"turbo.json\" -o -name \"CLAUDE.md\" -o -name \"README.md\" -o -name \".env.example\" \\\\\\) 2>/dev/null | head -50)",
+      "Read(//mnt/c/dev/**)",
+      "Bash(ls -la /mnt/c/dev/ 2>/dev/null || ls -la c:/dev/ 2>/dev/null || echo \"Checking pwd:\" && pwd)",
+      "Read(//c/dev/**)",
+      "Bash(Get-ChildItem -Path \"c:\\\\dev\\\\delivery-app\" -Recurse)",
+      "Bash(Select-Object -Property FullName, PSIsContainer)",
+      "Bash(ConvertTo-Json)",
+      "Bash(Get-ChildItem -Path \"c:\\\\dev\\\\delivery-app\\\\apps\\\\web\\\\docs\\\\\" -File -Recurse | Select-Object FullName)"
     ]
   }
 }

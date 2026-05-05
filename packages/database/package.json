@@ -9,10 +9,12 @@
     "db:push": "drizzle-kit push"
   },
   "dependencies": {
-    "drizzle-orm": "latest",
-    "@neondatabase/serverless": "latest"
+    "@neondatabase/serverless": "latest",
+    "drizzle-orm": "latest"
   },
   "devDependencies": {
+    "@types/node": "^25.6.0",
+    "dotenv": "^17.4.2",
     "drizzle-kit": "latest",
     "typescript": "latest"
   }
